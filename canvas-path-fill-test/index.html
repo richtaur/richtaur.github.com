@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas Path Fill test</title>
+</head>
+<body>
+ 
+	<canvas id="stage" width="256" height="256"></canvas>
+ 
+	<script>
+ 
+		var stage = document.getElementById("stage");
+		var ctx = stage.getContext("2d");
+ 
+		ctx.beginPath();
+		ctx.arc(stage.width / 2, stage.height / 2, 100, 0, Math.PI * 2);
+		ctx.closePath();
+ 
+		ctx.fillStyle = "cornflowerblue";
+		ctx.fill(0, 0, stage.width, stage.height);
+ 
+		ctx.lineWidth = 3;
+		ctx.strokeStyle = "#000";
+		ctx.stroke();
+ 
+	</script>
+ 
+</body>
+</html>
